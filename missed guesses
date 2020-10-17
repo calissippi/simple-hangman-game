@@ -1,0 +1,35 @@
+# changes plot() if answer is incorrect
+
+def miss():
+    global missed
+    missed += 1
+#  head    
+    if missed == 1:
+        line3[6] = "〇"
+
+#  body
+    if missed == 2:
+        line4[6] = "|"
+        line5[6] = "|"
+        
+#  arm 1
+    if missed == 3:
+        line4[5] = "/"
+        line5[4] = " /"
+#  realign body        
+        line5[5] = " |"
+        line5[6] = " "
+        
+#  arm 2
+    if missed == 4:  
+        line4[7] = "\\"
+        line5[6] = " \\"       
+    
+#  leg 1
+    if missed == 5:
+        line6[5] = " /"
+        line7[5] = "/ "
+#  leg 2
+    if missed == 6:
+        line6[6] = "\\"
+        line7[6] = " \\"
