@@ -1,0 +1,26 @@
+# parts will be replaced when plot() is replaced
+
+def show_plot():
+    global banner, hidden_word, tries, x
+#     rule print once
+    if x < 2:
+        print(banner)
+        print("The secret word is {0} long.".format(len(hidden_word)))
+        print("You have {0} tries to guess the word.".format(tries))
+        print("Enter one English alphabet at a time.")
+        x += 1
+#     print plot
+    print(*line1)
+    print(*line2)
+    print(*line3)
+    print(*line4)
+    print(*line5)
+    print(*line6)
+    print(*line7)
+    print(*line8)
+    print(*line9)
+    print("\n")
+    print("Your answer: ", *space, "      Tries left: \"{0}\"".format(tries))
+    print("\n\n")
+plot()
+show_plot()
