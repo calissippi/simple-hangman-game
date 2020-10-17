@@ -1,0 +1,27 @@
+# guess a letter
+def do_abc():
+    global letter, missed, tries, hidden_word, space
+    if space == hidden_word:
+        pass
+    else:
+        tries -= 1
+        letter = input("Guess a letter: ")
+        letter = letter[0]
+        if letter.isalpha():
+            if letter.lower() in hidden_word:
+                for index, value in enumerate(hidden_word):
+                    if letter.lower() == value.lower():
+                        space[index] = hidden_word[index]
+                        print("\nCorrect.")
+                        print("\n*******\n")
+
+            else:
+                print("\nSorry. Your guess was incorrect.\n")
+                print("*******\n")
+                miss()
+
+        else:
+            print("\nEnter only one English letter.\n")
+            print("*******\n")
+            
+    show_plot()
