@@ -1,0 +1,16 @@
+import re
+from random import choice
+from IPython.display import display, clear_output
+
+# word list
+# this variable to change to retrieve words from a file
+words = "Hi, There, any, is, me, toot., hello6, byes-byes" 
+
+word_list = [i.lower() for i in re.split("[\W, 0-9]",words) if len(i)>3]
+hidden_word = [i for i in choice(word_list)]   
+space = ["_" for i in hidden_word]
+
+# used in later code
+tries = len(hidden_word)*2
+missed = 0
+x = 0
