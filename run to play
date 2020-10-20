@@ -26,7 +26,7 @@ def play_again():
         missed = 0
       
         lets_play()
-    elif again.lower in no:
+    elif again.lower() in no:
         print("Thanks for playing. Goodbye.")
     else:
         print("I guess that means \"no\". Goodbye.")
